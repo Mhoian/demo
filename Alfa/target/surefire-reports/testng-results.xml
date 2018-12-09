@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="before.TestRunner" duration-ms="27703" started-at="2018-12-09T10:46:54Z" finished-at="2018-12-09T10:47:22Z">
+    <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:before.TestRunner@13a57a3b]" name="runScenario" class="cucumber.api.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test name="Command line test" duration-ms="27703" started-at="2018-12-09T10:46:54Z" finished-at="2018-12-09T10:47:22Z">
+      <class name="before.TestRunner">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:before.TestRunner@13a57a3b]" name="setUpClass" is-config="true" duration-ms="109" started-at="2018-12-09T10:46:54Z" finished-at="2018-12-09T10:46:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method status="PASS" signature="runScenario(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:before.TestRunner@13a57a3b]" name="runScenario" duration-ms="14294" started-at="2018-12-09T10:46:54Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2018-12-09T10:47:08Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify user can login with valid login and password"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Login page functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:before.TestRunner@13a57a3b]" name="runScenario" duration-ms="7940" started-at="2018-12-09T10:47:08Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2018-12-09T10:47:16Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify user can login with invalid login and invalid password"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Login page functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:before.TestRunner@13a57a3b]" name="runScenario" duration-ms="5266" started-at="2018-12-09T10:47:16Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2018-12-09T10:47:22Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["User registration without entering username and password"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Login page functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:before.TestRunner@13a57a3b]" name="tearDownClass" is-config="true" duration-ms="42" started-at="2018-12-09T10:47:22Z" finished-at="2018-12-09T10:47:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- before.TestRunner -->
+    </test> <!-- Command line test -->
+  </suite> <!-- before.TestRunner -->
+</testng-results>
