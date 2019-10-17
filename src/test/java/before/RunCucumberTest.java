@@ -1,13 +1,15 @@
 package before;
 
 import com.codeborne.selenide.Configuration;
+import io.cucumber.junit.Cucumber;
+import io.cucumber.junit.CucumberOptions;
 import org.junit.BeforeClass;
 import org.junit.runner.RunWith;
 
 import static utils.ConfigProvider.getProperty;
 
-@RunWith(io.cucumber.junit.Cucumber.class)
-@io.cucumber.junit.CucumberOptions(
+@RunWith(Cucumber.class)
+@CucumberOptions(
         glue = {"before", "definition"},
         features = {"src/test/resources/features"},
         plugin = {"pretty", "html:target/cucumber-reports/cucumber-pretty",
