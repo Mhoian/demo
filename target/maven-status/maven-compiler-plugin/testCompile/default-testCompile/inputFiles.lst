@@ -1,4 +1,4 @@
-/home/dev/Alfa/src/test/java/before/TestRunner.java
-/home/dev/Alfa/src/test/java/before/BeforeWithLogin.java
-/home/dev/Alfa/src/test/java/before/BeforeMain.java
-/home/dev/Alfa/src/test/java/definition/LoginDefinition.java
+/home/dev/test/demo/src/test/java/before/BeforeMain.java
+/home/dev/test/demo/src/test/java/definition/LoginDefinition.java
+/home/dev/test/demo/src/test/java/before/BeforeWithLogin.java
+/home/dev/test/demo/src/test/java/before/RunCucumberTest.java

@@ -5,13 +5,11 @@ import cucumber.api.java.After;
 import cucumber.api.java.Before;
 
 import static com.codeborne.selenide.Selenide.open;
-import static utils.managers.DriverManager.setUpDriver;
 
 public class BeforeMain {
 
-    @Before("@before")
+    @Before(order = 20, value = "@before")
     public void beforeEach(){
-        setUpDriver();
         open("");
     }
 

@@ -1,4 +1,4 @@
-before/TestRunner.class
 before/BeforeWithLogin.class
 definition/LoginDefinition.class
 before/BeforeMain.class
+before/RunCucumberTest.class

@@ -3,10 +3,11 @@
     "line": 1,
     "elements": [
       {
+        "start_timestamp": "2019-10-17T12:53:09.460Z",
         "before": [
           {
             "result": {
-              "duration": 4782853912,
+              "duration": 3719966795,
               "status": "passed"
             },
             "match": {
@@ -21,7 +22,7 @@
         "after": [
           {
             "result": {
-              "duration": 169926583,
+              "duration": 87691048,
               "status": "passed"
             },
             "match": {
@@ -34,7 +35,7 @@
         "steps": [
           {
             "result": {
-              "duration": 3515325793,
+              "duration": 2828768173,
               "status": "passed"
             },
             "line": 5,
@@ -46,7 +47,7 @@
           },
           {
             "result": {
-              "duration": 4536337966,
+              "duration": 4416746797,
               "status": "passed"
             },
             "line": 6,
@@ -58,7 +59,7 @@
           },
           {
             "result": {
-              "duration": 1131892727,
+              "duration": 1070027707,
               "status": "passed"
             },
             "line": 7,
@@ -76,10 +77,11 @@
         ]
       },
       {
+        "start_timestamp": "2019-10-17T12:53:21.598Z",
         "before": [
           {
             "result": {
-              "duration": 5480302859,
+              "duration": 2436982778,
               "status": "passed"
             },
             "match": {
@@ -94,7 +96,7 @@
         "after": [
           {
             "result": {
-              "duration": 157635300,
+              "duration": 124787941,
               "status": "passed"
             },
             "match": {
@@ -107,7 +109,7 @@
         "steps": [
           {
             "result": {
-              "duration": 2218165000,
+              "duration": 2482058367,
               "status": "passed"
             },
             "line": 11,
@@ -119,8 +121,9 @@
           },
           {
             "result": {
-              "duration": 80529933,
-              "status": "passed"
+              "error_message": "org.junit.ComparisonFailure: [Invalid login or password] expected:\u003c[tru]e\u003e but was:\u003c[fals]e\u003e\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\n\tat definition.LoginDefinition.verifyInvalidLoginAndPassword(LoginDefinition.java:48)\n\tat ✽.User see error message \u0027Invalid login or password\u0027(file:src/test/resources/features/Login.feature:12)\n",
+              "duration": 36923726,
+              "status": "failed"
             },
             "line": 12,
             "name": "User see error message \u0027Invalid login or password\u0027",
@@ -137,10 +140,11 @@
         ]
       },
       {
+        "start_timestamp": "2019-10-17T12:53:26.689Z",
         "before": [
           {
             "result": {
-              "duration": 2645315509,
+              "duration": 2266807064,
               "status": "passed"
             },
             "match": {
@@ -155,7 +159,7 @@
         "after": [
           {
             "result": {
-              "duration": 100247794,
+              "duration": 127056928,
               "status": "passed"
             },
             "match": {
@@ -168,7 +172,7 @@
         "steps": [
           {
             "result": {
-              "duration": 2448170729,
+              "duration": 2180453927,
               "status": "passed"
             },
             "line": 16,
@@ -190,8 +194,9 @@
           },
           {
             "result": {
-              "duration": 70460835,
-              "status": "passed"
+              "error_message": "org.junit.ComparisonFailure: [Invalid login or password] expected:\u003c[tru]e\u003e but was:\u003c[fals]e\u003e\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\n\tat definition.LoginDefinition.verifyLoginAndPasswordFields(LoginDefinition.java:61)\n\tat ✽.User see error \u0027Invalid login or password\u0027(file:src/test/resources/features/Login.feature:17)\n",
+              "duration": 43113647,
+              "status": "failed"
             },
             "line": 17,
             "name": "User see error \u0027Invalid login or password\u0027",
@@ -212,7 +217,7 @@
     "description": "",
     "id": "login-page-functionality",
     "keyword": "Feature",
-    "uri": "src/test/resources/features/Login.feature",
+    "uri": "file:src/test/resources/features/Login.feature",
     "tags": []
   }
 ]

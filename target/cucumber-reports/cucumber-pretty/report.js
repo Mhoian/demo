@@ -1,4 +1,4 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("src/test/resources/features/Login.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/Login.feature");
 formatter.feature({
   "name": "Login page functionality",
   "description": "",
@@ -81,7 +81,8 @@ formatter.match({
   "location": "LoginDefinition.verifyInvalidLoginAndPassword()"
 });
 formatter.result({
-  "status": "passed"
+  "error_message": "org.junit.ComparisonFailure: [Invalid login or password] expected:\u003c[tru]e\u003e but was:\u003c[fals]e\u003e\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\n\tat definition.LoginDefinition.verifyInvalidLoginAndPassword(LoginDefinition.java:48)\n\tat ✽.User see error message \u0027Invalid login or password\u0027(file:src/test/resources/features/Login.feature:12)\n",
+  "status": "failed"
 });
 formatter.after({
   "status": "passed"
@@ -117,7 +118,8 @@ formatter.match({
   "location": "LoginDefinition.verifyLoginAndPasswordFields()"
 });
 formatter.result({
-  "status": "passed"
+  "error_message": "org.junit.ComparisonFailure: [Invalid login or password] expected:\u003c[tru]e\u003e but was:\u003c[fals]e\u003e\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\n\tat definition.LoginDefinition.verifyLoginAndPasswordFields(LoginDefinition.java:61)\n\tat ✽.User see error \u0027Invalid login or password\u0027(file:src/test/resources/features/Login.feature:17)\n",
+  "status": "failed"
 });
 formatter.after({
   "status": "passed"
