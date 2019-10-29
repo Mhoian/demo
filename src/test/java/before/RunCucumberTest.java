@@ -1,8 +1,8 @@
 package before;
 
 import com.codeborne.selenide.Configuration;
-import io.cucumber.junit.Cucumber;
-import io.cucumber.junit.CucumberOptions;
+import cucumber.api.CucumberOptions;
+import cucumber.api.junit.Cucumber;
 import org.junit.BeforeClass;
 import org.junit.runner.RunWith;
 
@@ -18,13 +18,4 @@ import static utils.ConfigProvider.getProperty;
 )
 
 public class RunCucumberTest {
-
-    @BeforeClass
-    public static void setUpDriver() {
-        Configuration.baseUrl = getProperty("app.url");
-        Configuration.browser = "chrome";
-        Configuration.holdBrowserOpen = true;
-        Configuration.startMaximized = true;
-        Configuration.timeout = 30000;
-    }
 }

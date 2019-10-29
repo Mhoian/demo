@@ -8,11 +8,10 @@ import static utils.ConfigProvider.getProperty;
 
 public class DriverManager {
 
-//    @BeforeClass
-//    public static void setUpDriver() {
-//        Configuration.baseUrl = getProperty("app.url");
-//        Configuration.browser = "chrome";
-//        Configuration.holdBrowserOpen = true;
-//        Configuration.startMaximized = true;
-//    }
+    public static void setUpDriver() {
+        Configuration.baseUrl = getProperty("app.url");
+        Configuration.browser = "chrome";
+        Configuration.holdBrowserOpen = true;
+        Configuration.startMaximized = true;
+    }
 }
