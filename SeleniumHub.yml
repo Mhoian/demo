@@ -1,4 +1,4 @@
-version: '2'
+version: '1'
 services:
   chrome:
     image: selenium/node-chrome:3.141.59-xenon

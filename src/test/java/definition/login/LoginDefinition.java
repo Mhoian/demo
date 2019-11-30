@@ -1,18 +1,15 @@
-package definition;
+package definition.login;
 
-import com.codeborne.selenide.Condition;
 import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import lombok.AllArgsConstructor;
-import steps.LoginSteps;
+import steps.login.LoginSteps;
 import steps.topMenu.TopMenuSteps;
 
-import static org.assertj.core.api.Assertions.assertThat;
 import static utils.ConfigProvider.getProperty;
-import static utils.WaitUrils.waitPageLoaded;
 
 @AllArgsConstructor
 public class LoginDefinition {
@@ -55,5 +52,10 @@ public class LoginDefinition {
     @And("^User can see error (.*)$")
     public void userCanSeeError(String message) {
         loginSteps.incorrectLoginOrPasswordError(message);
+    }
+
+    @Then("^User see error requrid fields (.*)$")
+    public void userSeeErrorRequridFields(String message){
+        loginSteps.messageRequired(message);
     }
 }

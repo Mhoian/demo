@@ -2,14 +2,14 @@ package before;
 
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
-import pages.LoginPage;
-import steps.LoginSteps;
+import pages.login.LoginPage;
+import steps.login.LoginSteps;
 
 import static utils.ConfigProvider.getProperty;
 
 public class BeforeWithLogin extends BeforeMain {
 
-    LoginSteps loginSteps = new LoginSteps(new LoginPage());
+    private LoginSteps loginSteps = new LoginSteps(new LoginPage());
 
     @Before("@beforeWithLogin")
     public void beforeEach(){

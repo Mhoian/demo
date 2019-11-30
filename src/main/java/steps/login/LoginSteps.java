@@ -1,8 +1,8 @@
-package steps;
+package steps.login;
 
 import com.codeborne.selenide.Condition;
 import lombok.AllArgsConstructor;
-import pages.LoginPage;
+import pages.login.LoginPage;
 
 @AllArgsConstructor
 public class LoginSteps {
@@ -41,6 +41,11 @@ public class LoginSteps {
 
     public void incorrectLoginOrPasswordError(String message){
         loginPage.getInvalidLoginOrPassLabel()
+                .shouldHave(Condition.exactText(message));
+    }
+
+    public void messageRequired(String message){
+        loginPage.getRequiredFieldError()
                 .shouldHave(Condition.exactText(message));
     }
 
