@@ -1,12 +1,14 @@
 package definition;
 
 import com.codeborne.selenide.Condition;
+import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import lombok.AllArgsConstructor;
 import steps.LoginSteps;
+import steps.topMenu.TopMenuSteps;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static utils.ConfigProvider.getProperty;
@@ -16,12 +18,7 @@ import static utils.WaitUrils.waitPageLoaded;
 public class LoginDefinition {
 
     LoginSteps loginSteps;
-
-
-    @Given("User enter login (.*) and password (.*) at Login page")
-    public void enterEmailAndPassword(String login, String password) {
-        loginSteps.enterEmailAndPassword(login, password);
-    }
+    TopMenuSteps topMenuSteps;
 
     @Given("User login as 'Default User' at Login page")
     public void enterDefaultEmailAndPassword() {
@@ -34,43 +31,29 @@ public class LoginDefinition {
         loginSteps.clickSubmitButton();
     }
 
-    @When("User enter password (.*) and make submit at Login page")
-    public void enterPassword(String password) {
-        loginSteps.enterSmsPassword(password)
-                .clickSubmitButtonAfterInsertSms();
-    }
-
     @When("User enter default sms-password and make submit at Login page")
     public void enterDefaultSmsPassword() {
         loginSteps.enterSmsPassword(getProperty("user.sms_password")).
                 clickSubmitButtonAfterInsertSms();
-        waitPageLoaded();
     }
 
-    @Then("User see sms password required widget present at Login page")
-    public void verifySmsPasswordRequiredPresent() {
-        (loginSteps.isSmsPasswordLabelPresent()).shouldBe(Condition.appear);
+    @Then("^User see title at Home page (.*)$")
+    public void userSeeElementsAtHomePage(String title){
+        topMenuSteps.homePageTitle(title);
     }
 
-    @Then("User see error (.*) present at Login page")
-    public void verifyInvalidEmailOrPassLabelPresent(String message) {
-        loginSteps.isInvalidEmailOrPassLabelPresent(message);
+    @Given("^User set login (.*)$")
+    public void userSetLoginLogin(String login) {
+        loginSteps.setLogin(login);
     }
 
-    @Then("User see disabled button Login present at Login page")
-    public void verifyDisabledSubmitButton() {
-        loginSteps.isSubmitButtonEnabled();
+    @Then("^User set password (.*)$")
+    public void userSetPasswordPassword(String password) {
+        loginSteps.setPassword(password);
     }
 
-
-    @And("^User set account number (.*)$")
-    public void setAccountNumber(String accountNumber) {
-        loginSteps.setAccountNumber(accountNumber);
+    @And("^User can see error (.*)$")
+    public void userCanSeeError(String message) {
+        loginSteps.incorrectLoginOrPasswordError(message);
     }
-
-    @And("^User set account or card number (.*)$")
-    public void setAccountOrCardNumber(String accountOrCardNumber) {
-        loginSteps.setAccountOrCardNumber(accountOrCardNumber);
-    }
-
 }

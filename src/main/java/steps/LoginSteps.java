@@ -1,16 +1,14 @@
 package steps;
 
 import com.codeborne.selenide.Condition;
-import com.codeborne.selenide.SelenideElement;
 import lombok.AllArgsConstructor;
 import pages.LoginPage;
-
-import static utils.WaitUrils.waitPageLoaded;
 
 @AllArgsConstructor
 public class LoginSteps {
 
     LoginPage loginPage;
+
 
     public LoginSteps enterEmailAndPassword(String login, String password) {
         loginPage.getUserLogin().setValue(login);
@@ -20,13 +18,11 @@ public class LoginSteps {
 
     public LoginSteps clickSubmitButton() {
         loginPage.getSubmitButton().click();
-        waitPageLoaded();
         return this;
     }
 
     public void clickSubmitButtonAfterInsertSms(){
         loginPage.getSubmitButtonAfterInsertSms().click();
-        waitPageLoaded();
     }
 
     public LoginSteps enterSmsPassword(String smsPassword){
@@ -34,28 +30,18 @@ public class LoginSteps {
         return this;
     }
 
-    public void isSubmitButtonEnabled() {
-        loginPage.getDisabledButton()
-                .isEnabled();
+    public void setLogin(String login){
+        loginPage.getUserLogin()
+                .setValue(login);
     }
 
-    public SelenideElement isSmsPasswordLabelPresent() {
-        return loginPage.getSmsPasswordLabel();
-    }
+    public void setPassword(String password){
+        loginPage.getUserPassword()
+                .setValue(password); }
 
-    public void isInvalidEmailOrPassLabelPresent(String message) {
-        loginPage.getInvalidEmailOrPassLabel()
+    public void incorrectLoginOrPasswordError(String message){
+        loginPage.getInvalidLoginOrPassLabel()
                 .shouldHave(Condition.exactText(message));
     }
 
-    public void setAccountNumber(String accountNumber){
-        loginPage.getAccountNumber()
-                .shouldBe(Condition.visible)
-                .val(accountNumber);
-
-    }public void setAccountOrCardNumber(String accountOrCardNumber){
-        loginPage.getAccountOrCardNumber()
-                .shouldBe(Condition.visible)
-                .val(accountOrCardNumber);
-    }
 }

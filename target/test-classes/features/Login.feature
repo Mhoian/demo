@@ -3,15 +3,16 @@ Feature: Login page functionality
 
   Scenario: Verify user can login with valid login and password
     Given User login as 'Default User' at Login page
-    When User see sms password required widget present at Login page
-    Then User see elements at Home page
+    When User enter default sms-password and make submit at Login page
+    Then User see title at Home page Головна
 
 
-   Scenario: Verify user can login with invalid login and invalid password
-    Given User login as 'Invalid User' at Login page and InvalidPassword
-    Then User see error message 'Invalid login or password'
-
-
-  Scenario: User registration without entering username and password
-    Given User enter email InvalidLogin and password InvalidPassword and make submit at Login page
-    Then User see error 'Invalid login or password'
+  Scenario Outline: Verify user can login with invalid login and invalid password
+    Given User set login <login>
+    Then User set password <password>
+    And User click submit login form at Login page
+    And User can see error Невірний логін або пароль
+    Examples:
+      |login    | password|
+      | testcom | somePassWithVeryLongValue |
+      | кирилица| парольна руском           |
