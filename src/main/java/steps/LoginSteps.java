@@ -1,55 +1,61 @@
 package steps;
 
+import com.codeborne.selenide.Condition;
+import com.codeborne.selenide.SelenideElement;
 import lombok.AllArgsConstructor;
-import utils.managers.PageManager;
+import pages.LoginPage;
 
-import static utils.WaitUrils.waitUntilEnabled;
+import static utils.WaitUrils.waitPageLoaded;
 
 @AllArgsConstructor
 public class LoginSteps {
 
-    PageManager pages;
+    LoginPage loginPage;
 
-    public LoginSteps enterLoginAndPassword(String login, String password) {
-        pages.getLoginPage().getUserDefault().setValue(login);
-        pages.getLoginPage().getUserPassword().setValue(password);
-        return this;
-    }
-
-    public LoginSteps enterPassword(String password) {
-        pages.getLoginPage().getUserPassword().setValue(password);
+    public LoginSteps enterEmailAndPassword(String login, String password) {
+        loginPage.getUserLogin().setValue(login);
+        loginPage.getUserPassword().setValue(password);
         return this;
     }
 
     public LoginSteps clickSubmitButton() {
-        pages.getLoginPage().getSubmitButton().click();
+        loginPage.getSubmitButton().click();
+        waitPageLoaded();
         return this;
     }
 
-    public LoginSteps clickSubmitButtonAfterInsertSms(){
-        pages.getLoginPage().getSubmitButtonAfterInsertSms().click();
-        return this;
+    public void clickSubmitButtonAfterInsertSms(){
+        loginPage.getSubmitButtonAfterInsertSms().click();
+        waitPageLoaded();
     }
 
-    public boolean isSubmitButtonEnabled() {
-        return pages.getLoginPage().getSubmitButton().isEnabled();
-    }
-
-    public boolean isSmsPasswordLabelPresent() {
-        waitUntilEnabled(pages.getLoginPage().getSubmitButton());
-        return pages.getLoginPage().getSmsPasswordLabel().isDisplayed();
-
-    }
     public LoginSteps enterSmsPassword(String smsPassword){
-        pages.getLoginPage().getSmsPasswordLabel().setValue(smsPassword);
+        loginPage.getSmsPasswordLabel().shouldBe(Condition.visible).setValue(smsPassword);
         return this;
     }
 
-    public boolean isInvalidEmailOrPassLabelPresent() {
-        return pages.getLoginPage().getInvalidEmailOrPassLabel().isDisplayed();
+    public void isSubmitButtonEnabled() {
+        loginPage.getDisabledButton()
+                .isEnabled();
     }
 
-    public boolean isInvalidSmsPassLabelPresent() {
-        return pages.getLoginPage().getInvalidSmsPassLabel().isDisplayed();
+    public SelenideElement isSmsPasswordLabelPresent() {
+        return loginPage.getSmsPasswordLabel();
+    }
+
+    public void isInvalidEmailOrPassLabelPresent(String message) {
+        loginPage.getInvalidEmailOrPassLabel()
+                .shouldHave(Condition.exactText(message));
+    }
+
+    public void setAccountNumber(String accountNumber){
+        loginPage.getAccountNumber()
+                .shouldBe(Condition.visible)
+                .val(accountNumber);
+
+    }public void setAccountOrCardNumber(String accountOrCardNumber){
+        loginPage.getAccountOrCardNumber()
+                .shouldBe(Condition.visible)
+                .val(accountOrCardNumber);
     }
 }
