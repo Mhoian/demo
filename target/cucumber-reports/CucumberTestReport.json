@@ -1,13 +1,12 @@
 [
   {
-    "line": 1,
+    "line": 2,
     "elements": [
       {
-        "start_timestamp": "2019-10-17T12:53:09.460Z",
         "before": [
           {
             "result": {
-              "duration": 3719966795,
+              "duration": 12696055488,
               "status": "passed"
             },
             "match": {
@@ -18,11 +17,11 @@
         "line": 4,
         "name": "Verify user can login with valid login and password",
         "description": "",
-        "id": "login-page-functionality;verify-user-can-login-with-valid-login-and-password",
+        "id": "login-page;verify-user-can-login-with-valid-login-and-password",
         "after": [
           {
             "result": {
-              "duration": 87691048,
+              "duration": 85815005,
               "status": "passed"
             },
             "match": {
@@ -35,173 +34,970 @@
         "steps": [
           {
             "result": {
-              "duration": 2828768173,
+              "duration": 721351508,
               "status": "passed"
             },
             "line": 5,
             "name": "User login as \u0027Default User\u0027 at Login page",
             "match": {
-              "location": "LoginDefinition.enterLoginAndPassword()"
+              "location": "LoginDefinition.enterDefaultEmailAndPassword()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 4416746797,
+              "duration": 16801541849,
               "status": "passed"
             },
             "line": 6,
-            "name": "User see sms password required widget present at Login page",
+            "name": "User enter default sms-password and make submit at Login page",
             "match": {
-              "location": "LoginDefinition.enterSmsPasswor()"
+              "location": "LoginDefinition.enterDefaultSmsPassword()"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 1070027707,
+              "duration": 834452229,
               "status": "passed"
             },
             "line": 7,
-            "name": "User see elements at Home page",
-            "match": {
-              "location": "LoginDefinition.verifySmsPasswordRequiredPresent()"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@before"
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2019-10-17T12:53:21.598Z",
-        "before": [
-          {
-            "result": {
-              "duration": 2436982778,
-              "status": "passed"
-            },
-            "match": {
-              "location": "BeforeMain.beforeEach()"
-            }
-          }
-        ],
-        "line": 10,
-        "name": "Verify user can login with invalid login and invalid password",
-        "description": "",
-        "id": "login-page-functionality;verify-user-can-login-with-invalid-login-and-invalid-password",
-        "after": [
-          {
-            "result": {
-              "duration": 124787941,
-              "status": "passed"
-            },
-            "match": {
-              "location": "BeforeMain.afterEach()"
-            }
-          }
-        ],
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "duration": 2482058367,
-              "status": "passed"
-            },
-            "line": 11,
-            "name": "User login as \u0027Invalid User\u0027 at Login page and InvalidPassword",
-            "match": {
-              "location": "LoginDefinition.enterLoginAndInvalidPassword()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "error_message": "org.junit.ComparisonFailure: [Invalid login or password] expected:\u003c[tru]e\u003e but was:\u003c[fals]e\u003e\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\n\tat definition.LoginDefinition.verifyInvalidLoginAndPassword(LoginDefinition.java:48)\n\tat ✽.User see error message \u0027Invalid login or password\u0027(file:src/test/resources/features/Login.feature:12)\n",
-              "duration": 36923726,
-              "status": "failed"
-            },
-            "line": 12,
-            "name": "User see error message \u0027Invalid login or password\u0027",
-            "match": {
-              "location": "LoginDefinition.verifyInvalidLoginAndPassword()"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@before"
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2019-10-17T12:53:26.689Z",
-        "before": [
-          {
-            "result": {
-              "duration": 2266807064,
-              "status": "passed"
-            },
-            "match": {
-              "location": "BeforeMain.beforeEach()"
-            }
-          }
-        ],
-        "line": 15,
-        "name": "User registration without entering username and password",
-        "description": "",
-        "id": "login-page-functionality;user-registration-without-entering-username-and-password",
-        "after": [
-          {
-            "result": {
-              "duration": 127056928,
-              "status": "passed"
-            },
-            "match": {
-              "location": "BeforeMain.afterEach()"
-            }
-          }
-        ],
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "duration": 2180453927,
-              "status": "passed"
-            },
-            "line": 16,
-            "name": "User enter email InvalidLogin and password InvalidPassword and make submit at Login page",
+            "name": "User see title at Home page Головна",
             "match": {
               "arguments": [
                 {
-                  "val": "InvalidLogin",
-                  "offset": 17
-                },
-                {
-                  "val": "InvalidPassword",
-                  "offset": 43
+                  "val": "Головна",
+                  "offset": 28
                 }
               ],
-              "location": "LoginDefinition.notEnterLoginAndPassword(String,String)"
+              "location": "LoginDefinition.userSeeElementsAtHomePage(String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@before"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 4205991345,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BeforeMain.beforeEach()"
+            }
+          }
+        ],
+        "line": 16,
+        "name": "Verify user can login with valid or invalid login and password",
+        "description": "",
+        "id": "login-page;verify-user-can-login-with-valid-or-invalid-login-and-password;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 90178545,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BeforeMain.afterEach()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 202012690,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "User set login testcom",
+            "match": {
+              "arguments": [
+                {
+                  "val": "testcom",
+                  "offset": 15
+                }
+              ],
+              "location": "LoginDefinition.userSetLoginLogin(String)"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "error_message": "org.junit.ComparisonFailure: [Invalid login or password] expected:\u003c[tru]e\u003e but was:\u003c[fals]e\u003e\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\n\tat definition.LoginDefinition.verifyLoginAndPasswordFields(LoginDefinition.java:61)\n\tat ✽.User see error \u0027Invalid login or password\u0027(file:src/test/resources/features/Login.feature:17)\n",
-              "duration": 43113647,
-              "status": "failed"
+              "duration": 281005163,
+              "status": "passed"
             },
-            "line": 17,
-            "name": "User see error \u0027Invalid login or password\u0027",
+            "line": 11,
+            "name": "User set password somePassWithVeryLongValue",
             "match": {
-              "location": "LoginDefinition.verifyLoginAndPasswordFields()"
+              "arguments": [
+                {
+                  "val": "somePassWithVeryLongValue",
+                  "offset": 18
+                }
+              ],
+              "location": "LoginDefinition.userSetPasswordPassword(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 163980353,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "User click submit login form at Login page",
+            "match": {
+              "location": "LoginDefinition.clickSubmitButton()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 310249636,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "User can see error Невірний логін або пароль",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Невірний логін або пароль",
+                  "offset": 19
+                }
+              ],
+              "location": "LoginDefinition.userCanSeeError(String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@before"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 8956931882,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BeforeMain.beforeEach()"
+            }
+          }
+        ],
+        "line": 17,
+        "name": "Verify user can login with valid or invalid login and password",
+        "description": "",
+        "id": "login-page;verify-user-can-login-with-valid-or-invalid-login-and-password;;3",
+        "after": [
+          {
+            "result": {
+              "duration": 92088508,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BeforeMain.afterEach()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 191693438,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "User set login кирилица",
+            "match": {
+              "arguments": [
+                {
+                  "val": "кирилица",
+                  "offset": 15
+                }
+              ],
+              "location": "LoginDefinition.userSetLoginLogin(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 244613528,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "User set password парольна руском",
+            "match": {
+              "arguments": [
+                {
+                  "val": "парольна руском",
+                  "offset": 18
+                }
+              ],
+              "location": "LoginDefinition.userSetPasswordPassword(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 155271867,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "User click submit login form at Login page",
+            "match": {
+              "location": "LoginDefinition.clickSubmitButton()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 300896245,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "User can see error Невірний логін або пароль",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Невірний логін або пароль",
+                  "offset": 19
+                }
+              ],
+              "location": "LoginDefinition.userCanSeeError(String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@before"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 6758520518,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BeforeMain.beforeEach()"
+            }
+          }
+        ],
+        "line": 18,
+        "name": "Verify user can login with valid or invalid login and password",
+        "description": "",
+        "id": "login-page;verify-user-can-login-with-valid-or-invalid-login-and-password;;4",
+        "after": [
+          {
+            "result": {
+              "duration": 82939922,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BeforeMain.afterEach()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 242048878,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "User set login !@#$%%^",
+            "match": {
+              "arguments": [
+                {
+                  "val": "!@#$%%^",
+                  "offset": 15
+                }
+              ],
+              "location": "LoginDefinition.userSetLoginLogin(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 262590284,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "User set password !@#$$%%^Ввіаіа",
+            "match": {
+              "arguments": [
+                {
+                  "val": "!@#$$%%^Ввіаіа",
+                  "offset": 18
+                }
+              ],
+              "location": "LoginDefinition.userSetPasswordPassword(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 155747376,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "User click submit login form at Login page",
+            "match": {
+              "location": "LoginDefinition.clickSubmitButton()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 283229878,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "User can see error Невірний логін або пароль",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Невірний логін або пароль",
+                  "offset": 19
+                }
+              ],
+              "location": "LoginDefinition.userCanSeeError(String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@before"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 4041195468,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BeforeMain.beforeEach()"
+            }
+          }
+        ],
+        "line": 19,
+        "name": "Verify user can login with valid or invalid login and password",
+        "description": "",
+        "id": "login-page;verify-user-can-login-with-valid-or-invalid-login-and-password;;5",
+        "after": [
+          {
+            "result": {
+              "duration": 99074316,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BeforeMain.afterEach()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 225687894,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "User set login front",
+            "match": {
+              "arguments": [
+                {
+                  "val": "front",
+                  "offset": 15
+                }
+              ],
+              "location": "LoginDefinition.userSetLoginLogin(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 198720194,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "User set password wegfwrgwrgwrg",
+            "match": {
+              "arguments": [
+                {
+                  "val": "wegfwrgwrgwrg",
+                  "offset": 18
+                }
+              ],
+              "location": "LoginDefinition.userSetPasswordPassword(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 162485236,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "User click submit login form at Login page",
+            "match": {
+              "location": "LoginDefinition.clickSubmitButton()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1925335873,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "User can see error Невірний логін або пароль",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Невірний логін або пароль",
+                  "offset": 19
+                }
+              ],
+              "location": "LoginDefinition.userCanSeeError(String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@before"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 3956431960,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BeforeMain.beforeEach()"
+            }
+          }
+        ],
+        "line": 20,
+        "name": "Verify user can login with valid or invalid login and password",
+        "description": "",
+        "id": "login-page;verify-user-can-login-with-valid-or-invalid-login-and-password;;6",
+        "after": [
+          {
+            "result": {
+              "duration": 96064258,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BeforeMain.afterEach()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 193739881,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "User set login admin",
+            "match": {
+              "arguments": [
+                {
+                  "val": "admin",
+                  "offset": 15
+                }
+              ],
+              "location": "LoginDefinition.userSetLoginLogin(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 194396256,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "User set password @W2w2w2w",
+            "match": {
+              "arguments": [
+                {
+                  "val": "@W2w2w2w",
+                  "offset": 18
+                }
+              ],
+              "location": "LoginDefinition.userSetPasswordPassword(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 177374428,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "User click submit login form at Login page",
+            "match": {
+              "location": "LoginDefinition.clickSubmitButton()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 285539822,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "User can see error Невірний логін або пароль",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Невірний логін або пароль",
+                  "offset": 19
+                }
+              ],
+              "location": "LoginDefinition.userCanSeeError(String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@before"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 6574581019,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BeforeMain.beforeEach()"
+            }
+          }
+        ],
+        "line": 21,
+        "name": "Verify user can login with valid or invalid login and password",
+        "description": "",
+        "id": "login-page;verify-user-can-login-with-valid-or-invalid-login-and-password;;7",
+        "after": [
+          {
+            "result": {
+              "duration": 97255090,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BeforeMain.afterEach()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 220243079,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "User set login manager",
+            "match": {
+              "arguments": [
+                {
+                  "val": "manager",
+                  "offset": 15
+                }
+              ],
+              "location": "LoginDefinition.userSetLoginLogin(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 220531737,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "User set password @W2w2w2w",
+            "match": {
+              "arguments": [
+                {
+                  "val": "@W2w2w2w",
+                  "offset": 18
+                }
+              ],
+              "location": "LoginDefinition.userSetPasswordPassword(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 163781864,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "User click submit login form at Login page",
+            "match": {
+              "location": "LoginDefinition.clickSubmitButton()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 289503295,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "User can see error Невірний логін або пароль",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Невірний логін або пароль",
+                  "offset": 19
+                }
+              ],
+              "location": "LoginDefinition.userCanSeeError(String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@before"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 6389579328,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BeforeMain.beforeEach()"
+            }
+          }
+        ],
+        "line": 22,
+        "name": "Verify user can login with valid or invalid login and password",
+        "description": "",
+        "id": "login-page;verify-user-can-login-with-valid-or-invalid-login-and-password;;8",
+        "after": [
+          {
+            "result": {
+              "duration": 79340361,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BeforeMain.afterEach()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 189079083,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "User set login testcom",
+            "match": {
+              "arguments": [
+                {
+                  "val": "testcom",
+                  "offset": 15
+                }
+              ],
+              "location": "LoginDefinition.userSetLoginLogin(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 211826138,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "User set password @W2w2w2w",
+            "match": {
+              "arguments": [
+                {
+                  "val": "@W2w2w2w",
+                  "offset": 18
+                }
+              ],
+              "location": "LoginDefinition.userSetPasswordPassword(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 152583314,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "User click submit login form at Login page",
+            "match": {
+              "location": "LoginDefinition.clickSubmitButton()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 288931966,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "User can see error Невірний логін або пароль",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Невірний логін або пароль",
+                  "offset": 19
+                }
+              ],
+              "location": "LoginDefinition.userCanSeeError(String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@before"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 3405816594,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BeforeMain.beforeEach()"
+            }
+          }
+        ],
+        "line": 31,
+        "name": "Validation of login and password fields",
+        "description": "",
+        "id": "login-page;validation-of-login-and-password-fields;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 88525394,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BeforeMain.afterEach()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 137348380,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "User set login ",
+            "match": {
+              "arguments": [
+                {
+                  "val": "",
+                  "offset": 15
+                }
+              ],
+              "location": "LoginDefinition.userSetLoginLogin(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 266836881,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "User set password somePassWithVeryLongValue",
+            "match": {
+              "arguments": [
+                {
+                  "val": "somePassWithVeryLongValue",
+                  "offset": 18
+                }
+              ],
+              "location": "LoginDefinition.userSetPasswordPassword(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 113175853,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "User click submit login form at Login page",
+            "match": {
+              "location": "LoginDefinition.clickSubmitButton()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 29077564,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "User see error requrid fields Обов\u0027язкове поле",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Обов\u0027язкове поле",
+                  "offset": 30
+                }
+              ],
+              "location": "LoginDefinition.userSeeErrorRequridFields(String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@before"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 5525543751,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BeforeMain.beforeEach()"
+            }
+          }
+        ],
+        "line": 32,
+        "name": "Validation of login and password fields",
+        "description": "",
+        "id": "login-page;validation-of-login-and-password-fields;;3",
+        "after": [
+          {
+            "result": {
+              "duration": 86816145,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BeforeMain.afterEach()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 229439760,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "User set login testcom",
+            "match": {
+              "arguments": [
+                {
+                  "val": "testcom",
+                  "offset": 15
+                }
+              ],
+              "location": "LoginDefinition.userSetLoginLogin(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 140729359,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "User set password ",
+            "match": {
+              "arguments": [
+                {
+                  "val": "",
+                  "offset": 18
+                }
+              ],
+              "location": "LoginDefinition.userSetPasswordPassword(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 112248684,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "User click submit login form at Login page",
+            "match": {
+              "location": "LoginDefinition.clickSubmitButton()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 31338760,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "User see error requrid fields Обов\u0027язкове поле",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Обов\u0027язкове поле",
+                  "offset": 30
+                }
+              ],
+              "location": "LoginDefinition.userSeeErrorRequridFields(String)"
             },
             "keyword": "Then "
           }
@@ -213,11 +1009,113 @@
         ]
       }
     ],
-    "name": "Login page functionality",
+    "name": "Login page",
     "description": "",
-    "id": "login-page-functionality",
+    "id": "login-page",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/features/Login.feature",
-    "tags": []
+    "uri": "src/test/resources/features/Login.feature",
+    "tags": [
+      {
+        "name": "@before",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  },
+  {
+    "line": 2,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 23595049373,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BeforeWithLogin.beforeEach()"
+            }
+          }
+        ],
+        "line": 4,
+        "name": "Creating a new payment in Ukraine",
+        "description": "",
+        "id": "payments;creating-a-new-payment-in-ukraine",
+        "after": [
+          {
+            "result": {
+              "duration": 141878288,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BeforeWithLogin.afterEach()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1084880184,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "User click on menu hryvnia operation",
+            "match": {
+              "location": "PaymentsDefinition.hryvniaOperationLink()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 375427627,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User goes to the Payments menu",
+            "match": {
+              "location": "PaymentsDefinition.userGoesToThePaymentsMenu()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 5300994016,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "User click button create payment",
+            "match": {
+              "location": "PaymentsDefinition.buttonCreatePayment()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@beforeWithLogin"
+          }
+        ]
+      }
+    ],
+    "name": "Payments",
+    "description": "",
+    "id": "payments",
+    "keyword": "Feature",
+    "uri": "src/test/resources/features/Payments.feature",
+    "tags": [
+      {
+        "name": "@beforeWithLogin",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
   }
 ]

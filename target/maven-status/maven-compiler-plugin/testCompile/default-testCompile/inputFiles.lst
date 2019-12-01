@@ -1,4 +1,6 @@
-/home/dev/test/demo/src/test/java/before/BeforeMain.java
-/home/dev/test/demo/src/test/java/definition/LoginDefinition.java
-/home/dev/test/demo/src/test/java/before/BeforeWithLogin.java
-/home/dev/test/demo/src/test/java/before/RunCucumberTest.java
+/home/dev/Untitled Folder/demo/src/test/java/definition/topMenu/TopMenuDefinition.java
+/home/dev/Untitled Folder/demo/src/test/java/before/BeforeMain.java
+/home/dev/Untitled Folder/demo/src/test/java/definition/payments/PaymentsDefinition.java
+/home/dev/Untitled Folder/demo/src/test/java/before/RunCucumberTest.java
+/home/dev/Untitled Folder/demo/src/test/java/before/BeforeWithLogin.java
+/home/dev/Untitled Folder/demo/src/test/java/definition/login/LoginDefinition.java

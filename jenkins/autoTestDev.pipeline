@@ -1,0 +1,28 @@
+@Library('Helper') import ib.jenkins.Helper
+
+timestamps {
+
+  node () {
+    def helper = new Helper(this)
+    try {
+      stage ('Checkout') {
+        helper.checkoutSingle('demo', 'master')
+      }
+      stage ('Test') {
+sh '''#!/bin/bash
+cd $WORKSPACE
+rm -rf build
+chown -R jenkins $WORKSPACE; sudo URL="" -u jenkins ./RunTests.sh -Dselenide.reportsUrl="https://example.com/job/$JOB_NAME/$BUILD_NUMBER/execution/node/5/ws/"
+ '''
+      }
+    } catch (error) {
+
+      helper.fail("AUTOTEST DEV has error", error)
+    } finally {
+
+     cucumber buildStatus: currentBuild.result,
+                    fileIncludePattern: "**/*.json",
+                    jsonReportDirectory: 'target/cucumber-reports/'
+    }
+  }
+}

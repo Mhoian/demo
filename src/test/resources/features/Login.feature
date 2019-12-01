@@ -1,5 +1,5 @@
 @before
-Feature: Login page functionality
+Feature: Login page
 
   Scenario: Verify user can login with valid login and password
     Given User login as 'Default User' at Login page
