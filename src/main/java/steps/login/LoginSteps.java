@@ -10,7 +10,7 @@ public class LoginSteps {
     LoginPage loginPage;
 
 
-    public LoginSteps enterEmailAndPassword(String login, String password) {
+    public LoginSteps enterLoginAndPassword(String login, String password) {
         loginPage.getUserLogin().setValue(login);
         loginPage.getUserPassword().setValue(password);
         return this;
@@ -26,7 +26,9 @@ public class LoginSteps {
     }
 
     public LoginSteps enterSmsPassword(String smsPassword){
-        loginPage.getSmsPasswordLabel().shouldBe(Condition.visible).setValue(smsPassword);
+        loginPage.getSmsPasswordLabel()
+                .shouldBe(Condition.visible)
+                .setValue(smsPassword);
         return this;
     }
 

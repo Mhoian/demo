@@ -13,7 +13,9 @@ public class ConfigProvider {
 
     @SneakyThrows
     public static String getProperty(final String propertyName) {
-        input = new FileInputStream("src/main/resources/finik.properties");
+        input = ConfigProvider.class
+                .getClassLoader()
+                .getResourceAsStream("application.properties");
         prop.load(input);
         return prop.getProperty(propertyName);
     }

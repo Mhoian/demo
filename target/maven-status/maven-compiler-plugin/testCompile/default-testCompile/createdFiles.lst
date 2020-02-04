@@ -1,6 +1,0 @@
-definition/topMenu/TopMenuDefinition.class
-before/BeforeWithLogin.class
-definition/login/LoginDefinition.class
-definition/payments/PaymentsDefinition.class
-before/BeforeMain.class
-before/RunCucumberTest.class

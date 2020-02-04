@@ -14,7 +14,7 @@ public class BeforeWithLogin extends BeforeMain {
     @Before("@beforeWithLogin")
     public void beforeEach(){
         super.beforeEach();
-        loginSteps.enterEmailAndPassword(getProperty("user.login"), getProperty("user.password")).
+        loginSteps.enterLoginAndPassword(getProperty("user.login"), getProperty("user.password")).
                 clickSubmitButton().
                 enterSmsPassword(getProperty("user.sms_password"))
                 .clickSubmitButtonAfterInsertSms();

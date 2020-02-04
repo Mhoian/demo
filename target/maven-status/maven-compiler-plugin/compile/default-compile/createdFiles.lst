@@ -1,9 +1,0 @@
-utils/ConfigProvider.class
-steps/payments/PaymentsSteps.class
-utils/WaitUrils.class
-utils/managers/DriverManager.class
-steps/topMenu/TopMenuSteps.class
-pages/payments/PaymentsPage.class
-pages/login/LoginPage.class
-steps/login/LoginSteps.class
-pages/topMenu/TopMenuPage.class

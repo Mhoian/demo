@@ -19,7 +19,7 @@ public class LoginDefinition {
 
     @Given("User login as 'Default User' at Login page")
     public void enterDefaultEmailAndPassword() {
-        loginSteps.enterEmailAndPassword(getProperty("user.login"), getProperty("user.password")).
+        loginSteps.enterLoginAndPassword(getProperty("user.login"), getProperty("user.password")).
                 clickSubmitButton();
     }
 
